@@ -1,0 +1,21 @@
+<div  *ngFor = "let eachproduct of products" class="row">
+
+ 
+    <div class="col-md-7">
+       
+            <img style="height:200px ; display:block;margin:auto"
+             class="image-fluid" class="row" src={{eachproduct.product.image}} alt="">                 
+    </div>
+
+    <div class="col-md-5">
+        <label  class="card-text">Name: {{eachproduct.product.name}}</label><br>
+        <label class="card-title">Quantity: {{eachproduct.product.quantity }}</label><br>
+        <label class="card-text">Price: {{eachproduct.product.price}}</label>   <br> 
+        <button (click)="removefromcart(eachproduct.product,eachproduct.productid)" class="btn btn-warning" type="submit" >
+            Remove From cart</button>
+    </div>
+
+
+    </div>
+    <label  class="card-text">Total Price: {{totalprice}}</label><br>
+    
