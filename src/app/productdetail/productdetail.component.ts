@@ -56,7 +56,7 @@ export class ProductdetailComponent implements OnInit {
 
   addToCart()
   {
-    if(localStorage.getItem('isLoggegdIn'))
+    if(localStorage.getItem('isLoggedIn'))
          {
 
     var url="https://learningmeanwithashu.herokuapp.com/api/addtocart";
@@ -67,10 +67,9 @@ export class ProductdetailComponent implements OnInit {
      console.log("error.....",error);
    });
   }
-}
-else
-{
-  this.router.navigate(['/login']);
+  else{
+    this.router.navigate(['/login']);
+  }
 }
 
 }

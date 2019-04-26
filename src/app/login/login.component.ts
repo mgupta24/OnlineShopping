@@ -20,7 +20,7 @@ export class LoginComponent{
     constructor(private authservice: AuthService,private http: HttpClient,
         private router:Router){
 
-          if(localStorage.getItem('isLoggegdIn'))
+          if(localStorage.getItem('isLoggedIn'))
           {
             this.router.navigate(['/']);
           }
